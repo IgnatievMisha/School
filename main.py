@@ -43,3 +43,9 @@ my_school=School("ItStep", [Lisa, Masha, Andriy, Dima, Gleb])
 print("initial students")
 for student in my_school.students:
     print(student)
+
+my_school.admit_students(Student("Bogdan", 3))
+my_school.expel_student(Student("Alisa", 6))
+print("Update")
+for student in my_school.students:
+    print(student)
