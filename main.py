@@ -1,5 +1,9 @@
 class School:
     def __init__(self, name, students):
         self.name=name
-        self.students=students
-    def admit_students(self, students):
+        self.students=students #spisok
+    def admit_students(self, student):
+        self.students.append(student)
+        print(f'{}') #dopisati
+
+class Student:
