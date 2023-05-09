@@ -2,6 +2,8 @@ class School:
     def __init__(self, name, students):
         self.name=name
         self.students=students #spisok
+        self.teachers=[] #1 exercise
+        self.classes=[] #2 exercise
     def admit_students(self, student):
         self.students.append(student)
         print(f'{student.name} was admit to school {self.name}') #dopisati
@@ -12,6 +14,10 @@ class School:
             print(f'{expelled_student.name} was deleted from {self.name}')
         else:
             print(f'{student.name} was not found {self.name}')
+    def add_teacher(self, teacher):
+        self.teachers.append(teacher)
+    def add_class(self, classs):
+        self.classes.append(classs)
 
 class Student:
     def __init__(self, name, grade):
@@ -45,7 +51,22 @@ for student in my_school.students:
     print(student)
 
 my_school.admit_students(Student("Bogdan", 3))
-my_school.expel_student(Student("Alisa", 6))
+my_school.expel_student(Student("Glebus", 100))
 print("Update")
 for student in my_school.students:
     print(student)
+
+#PRAKTICHNA ROBOTA
+
+class Teacher:
+    def __init__(self, name, subject, classes):
+        self.name=name
+        self.subject=subject
+        self.classes=classes
+
+class Class:
+    def __init__(self, number):
+        self.number=number
+        self.students=[]
+    def add_student(self, student):
+        self.students.append(student)
